@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+input {
+  @apply px-3 py-2;
+}
+
+.post-gradient {
+  background: linear-gradient(to right, #ffffff, #f8f9fa);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.auth-gradient {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(10px);
+}
+
+.like-animation {
+  animation: likeScale 0.3s ease-in-out;
+}
+
+@keyframes likeScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.interaction-button {
+  @apply p-2 rounded-full transition-all duration-200 ease-in-out hover:bg-gray-100/80;
+}
+
+.interaction-button.active {
+  @apply transform scale-110;
+}
